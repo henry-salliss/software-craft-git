@@ -1,9 +1,14 @@
 import './App.css';
+import BankAccount from './BankAccount';
+import CurrentAccount from './CurrentAccount';
+import SavingsAccount from './SavingsAccount';
 
 function App() {
   return (
     <div className="App">
-      <h1>this is a git demo app </h1>
+      <BankAccount type='Normal' customerName='Henry'/>
+      <CurrentAccount customerName='Bob'/>
+      <SavingsAccount type='Savings' customerName='John'/>
     </div>
   );
 }
