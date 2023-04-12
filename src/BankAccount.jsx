@@ -22,10 +22,14 @@ function BankAccount(props) {
 
   function withdraw(amount) {
     if (type !== 'Current' && amount > balance) {
+        console.log('current')
       setError('Insufficient funds')
       return;
     }
-    if(type === 'Current' && balance <= 0 - overdraftLimit) setError('over limit')
+    if(type === 'Current' && balance <= 0 - overdraftLimit) {
+        setError('over limit')
+        return;
+    }
 
     setBalance(balance - amount);
   }

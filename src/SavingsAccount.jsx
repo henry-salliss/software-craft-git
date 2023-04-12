@@ -23,7 +23,9 @@ function SavingsAccount(props) {
           setError('Insufficient funds')
           return;
         }
-        if(type === 'Current' && balance <= 0 - overdraftLimit) setError('over limit')
+        if(type === 'Current' && balance <= 0 - overdraftLimit) {
+            setError('over limit')
+        }
     
         setBalance(balance - amount);
       }
